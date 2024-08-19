@@ -11,7 +11,7 @@ const config: Config = {
   coverageProvider: "v8",
   // testEnvironment: "jsdom",
   // Add more setup options before each test is run
-  testPathIgnorePatterns: ["/node_modules/", "/e2e/", "/tests-examples/"],
+  testPathIgnorePatterns: ["/node_modules/", "/__e2e__/", "/tests-examples/"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testEnvironment: "jest-environment-jsdom",
   preset: "ts-jest",
