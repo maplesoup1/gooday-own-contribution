@@ -12,7 +12,7 @@ body {
   --orange: #fd7702;
   --yellow: #ffbb00;
 
-  --background: var(--orange);
+  --background: var(--purple);
   --accent: var(--white);
 
   margin: 0;
@@ -154,7 +154,7 @@ code {
 }
 
 .menu {
-  filter: drop-shadow(1px 1px 1px #fd7702);
+  filter: drop-shadow(1px 1px 1px #9900ff);
   width: 300px;
 }
 
@@ -253,4 +253,12 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 260px;
   font-weight: 700;
   border-radius: 30px;
+}
+
+.box {
+  width: 200px;
+  height: 80px;
+  border-radius: 50px;
+  background: var(--sky);
+  cursor: pointer;
 }
