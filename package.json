@@ -11,8 +11,8 @@
     "playwright": "playwright test"
   },
   "dependencies": {
-    "framer-motion": "^11.3.28",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.3.28",
     "next": "^14.2.5",
     "react": "^18",
     "react-dom": "^18",
