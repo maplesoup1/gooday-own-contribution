@@ -20,6 +20,9 @@ export default function RootLayout({
       <body
         className={`${inter.className} text-sm text-zinc-900 bg-[#fafafa] min-h-screen`}
       >
+        <div className="bg-[#FECB4D] absolute top-[10rem] -z-10 right-[-20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+        <div className="bg-[#e3cca0] absolute top-[10rem] -z-10 left-[-20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+
         {children}
       </body>
     </html>
