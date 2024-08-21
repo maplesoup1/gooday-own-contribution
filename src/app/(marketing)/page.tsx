@@ -9,7 +9,7 @@ import { RotateRect } from "@/components/rotate-rect";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center gap-[100px]">
+    <main className="flex flex-col justify-center items-center max-w-[1050px] m-auto">
       <Hero />
       <Feature />
       <ContactUs />
