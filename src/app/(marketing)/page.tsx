@@ -1,5 +1,5 @@
 import { FramerButton } from "@/components/framer-button";
-import Chat from "@/components/home/chat";
+import Chat_button from "@/components/home/chat_assitants/Chat_button";
 import ContactUs from "@/components/home/contact-us";
 import FAQ from "@/components/home/faq";
 import Feature from "@/components/home/feature";
@@ -14,7 +14,7 @@ export default function Home() {
       <Feature />
       <ContactUs />
       <FAQ />
-      <Chat />
+      <Chat_button />
     </main>
   );
 }
