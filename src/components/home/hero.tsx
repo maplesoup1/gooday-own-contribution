@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
 const hero = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center">
       {/* {Header} */}
 
-      <div className="w-[1064px] h-[120px] flex items-center">
+      <div className="w-full h-[120px] flex items-center">
         <img src="/img/logo-text.png" className="h-1/2 w-auto" />
         <div className="ml-auto flex space-x-10">
           <div className="text-xl text-yellow-400 cursor-pointer hover:bg-yellow-600">
@@ -18,7 +19,7 @@ const hero = () => {
         </div>
       </div>
 
-      <div className="w-[1000px] h-[234] flex flex-col justify-center items-center mt-6">
+      <div className="w-full flex flex-col justify-center items-center mt-6">
         <div className="text-4xl mb-4 font-bold">
           Bookings <span className="text-yellow-500">organised</span> for
           businesses and consumers
@@ -31,7 +32,12 @@ const hero = () => {
         </button>
       </div>
       <div className="h-auto w-auto flex justify-center items-center">
-        <img src="/img/avatar-group.png" className="h-auto w-auto" />
+        <Image
+          src="/img/avatar-group.png"
+          width={500}
+          height={500}
+          alt="Picture of the author"
+        />
       </div>
     </div>
   );
