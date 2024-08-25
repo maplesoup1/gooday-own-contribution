@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 /* @import "framer-motion.css"; */
+
+body::-webkit-scrollbar {
+  display: none;
+}
