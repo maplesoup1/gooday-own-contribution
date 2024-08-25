@@ -2,7 +2,7 @@ import React from "react";
 
 const hero = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center">
+    <div className="w-full h-screen max-h-[900px] flex flex-col justify-center">
       {/* {Header} */}
 
       <div className="w-[1064px] h-[120px] flex items-center">
