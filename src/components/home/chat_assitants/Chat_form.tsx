@@ -49,7 +49,7 @@ const help_assistent = () => {
 
   return (
     <div
-      className="fixed top-0 right-6 w-[380px] h-[590px] bg-white
+      className="fixed bottom-24 right-6 w-[380px] h-[590px] bg-white
     shadow-lg rounded-sm overflow-auto"
     >
       <div className="relative bg-yellow-300 mb-16">
