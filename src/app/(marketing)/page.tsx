@@ -4,12 +4,14 @@ import ContactUs from "@/components/home/contact-us";
 import FAQ from "@/components/home/faq";
 import Feature from "@/components/home/feature";
 import Hero from "@/components/home/hero";
+import Navigation_bar from "@/components/home/navigation bar/Navigation_bar";
 import { MenuTap } from "@/components/menu-tap";
 import { RotateRect } from "@/components/rotate-rect";
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center max-w-[1050px] m-auto">
+      <Navigation_bar/>
       <Hero />
       <Feature />
       <ContactUs />

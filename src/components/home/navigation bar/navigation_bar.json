@@ -1,0 +1,67 @@
+{
+  "navigationBar": {
+    "sections": [
+      {
+        "name": "Home",
+        "description": "Redirects user to the homepage"
+      },
+      {
+        "name": "Business",
+        "dropdown": [
+          "Marketing",
+          "Waitlists",
+          "Product Placement",
+          "Cancellation Fee",
+          "Referrals",
+          "Calendar",
+          "To-do List",
+          "Personal Assistant",
+          "Sales",
+          "Integrating Existing Software"
+        ]
+      },
+      {
+        "name": "Personal",
+        "dropdown": [
+          "Calendar",
+          "To-do List",
+          "Personal Assistant",
+          "Bookings",
+          "Waitlists",
+          "Favourite"
+        ]
+      },
+      {
+        "name": "Plans and Pricing",
+        "dropdown": [
+          "Business",
+          "Personal",
+          "Product Placement",
+          "Cost Per Click",
+          "Contact Sales"
+        ]
+      },
+      {
+        "name": "About Us",
+        "dropdown": [
+          "Meet the Team",
+          "Brand Values",
+          "Mission",
+          "Vision",
+          "Our Story",
+          "Gooday Ambassadors",
+          "Follow Us"
+        ]
+      },
+      {
+        "name": "Contact Us",
+        "dropdown": [
+          "Partner with Us",
+          "API Integration",
+          "Careers",
+          "FAQs"
+        ]
+      }
+    ]
+  }
+}
