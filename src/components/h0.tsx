@@ -1,13 +1,13 @@
 import React from "react";
 
-type H1Props = {
+type H0Props = {
   children: string;
   className?: string;
 };
 
-export default function H1({ children, className = "" }: H1Props) {
+export default function H0({ children, className = "" }: H0Props) {
   return (
-    <div className={`text-[34px] font-bold font-poppins ${className}`}>
+    <div className={`text-[50px] font-bold font-poppins ${className}`}>
       {children.split("\n").map((line, index) => (
         <React.Fragment key={index}>
           {line}
@@ -17,3 +17,4 @@ export default function H1({ children, className = "" }: H1Props) {
     </div>
   );
 }
+
