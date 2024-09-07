@@ -1,9 +1,14 @@
 import React from "react";
-
-type H1Props = {
-  children: React.ReactNode;
+import { cn } from "@/lib/utils";
+type H3Props = {
+  children: string;
+  className?: string;
 };
 
-export default function H1({ children }: H1Props) {
-  return <div className="text-lg">{children}</div>;
+export default function H3({ children, className = "" }: H3Props) {
+  return (
+    <div className={cn("text-[50px] font-bold font-poppins", className)}>
+      {children}
+    </div>
+  );
 }

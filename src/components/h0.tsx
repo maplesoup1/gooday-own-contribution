@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 
 type H0Props = {
   children: string;
@@ -7,14 +8,8 @@ type H0Props = {
 
 export default function H0({ children, className = "" }: H0Props) {
   return (
-    <div className={`text-[50px] font-bold font-poppins ${className}`}>
-      {children.split("\n").map((line, index) => (
-        <React.Fragment key={index}>
-          {line}
-          <br />
-        </React.Fragment>
-      ))}
+    <div className={cn("text-[50px] font-bold font-poppins", className)}>
+      {children}
     </div>
   );
 }
-

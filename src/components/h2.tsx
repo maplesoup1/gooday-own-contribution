@@ -1,10 +1,14 @@
 import React from "react";
-
+import { cn } from "@/lib/utils";
 type H2Props = {
-  children: React.ReactNode;
+  children: string;
   className?: string;
 };
 
 export default function H2({ children, className = "" }: H2Props) {
-  return <div className={`text-[20px] ${className}`}>{children}</div>;
+  return (
+    <div className={cn("text-[20px] font-bold font-poppins", className)}>
+      {children}
+    </div>
+  );
 }
