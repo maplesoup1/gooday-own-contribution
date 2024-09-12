@@ -1,43 +1,43 @@
 import React from "react";
 import Image from "next/image";
+import H1 from "../h1";
+import H2 from "../h2";
+import { cn } from "@/lib/utils"
+import { Button } from "../ui/button";
 
 const hero = () => {
   return (
-    <div className="w-full max-h-[900px] flex flex-col justify-center">
-      {/* {Header} */}
-
-      {/* <div className="w-full h-[120px] flex items-center">
-        <img src="/img/logo-text.png" className="h-1/2 w-auto" />
-        <div className="ml-auto flex space-x-10">
-          <div className="text-xl text-yellow-400 cursor-pointer hover:bg-yellow-600">
-            Contact
-          </div>
-          <div className="text-xl text-yellow-400 cursor-pointer hover:bg-yellow-600">
-            FAQ
-          </div>
-        </div>
-      </div> */}
-
-
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="text-4xl mb-4 font-bold">
-          Bookings <span className="text-yellow-500">organised</span> for
-          businesses and consumers
-        </div>
-        <div className="text-xl">
-          Increasing productivity & minimising cancellations
-        </div>
-        <button className="mt-8 h-auto w-auto p-4 rounded-3xl bg-yellow-300 text-xl text-white hover:bg-yellow-600">
-          Get Started
-        </button>
-      </div>
-      <div className="h-auto w-auto flex justify-center items-center">
+    <div className="w-screen h-screen flex">
+      <div className="h-auto w-1/2 flex flex-col mt-10 ml-10">
         <Image
-          src="/img/avatar-group.png"
-          width={500}
-          height={500}
-          alt="Picture of the hero"
+          src="/images/logo-text.png"
+          width={150}
+          height={150}
+          alt="logo"
+          className="my-14"
         />
+        <div>
+          <div className="flex flex-col gap-6">
+            <H2>Increased Bookings.</H2>
+            <H1>Decreased cancellations.</H1>
+          </div>
+
+          <div className="my-10 w-3/5">
+            Gooday is a fully integrated, centralised software and app that
+            streamlines bookings between businesses and consumers. We automate
+            the manual organisation process to increase bookings and decrease
+            cancellations for all.
+          </div>
+          <Button className="bg-blue-300 text-white rounded-3xl w-44">Get started</Button>
+        </div>
+      </div>
+
+      <div className="flex flex-col justify-center">
+
+        <div className="bg-blue-300 rounded-full w-72 h-72">
+
+        </div>
+
       </div>
     </div>
   );
