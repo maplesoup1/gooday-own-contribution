@@ -62,7 +62,21 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+		keyframes: {
+			updown_left: {
+				'0%, 100%': { transform: 'translateY(0) rotate(-13deg)' },
+				'50%': { transform: 'translateY(-20px) rotate(-13deg)' },
+			},
+			updown_right: {
+				'0%, 100%': { transform: 'translateY(0) rotate(13deg)' },
+				'50%': { transform: 'translateY(-20px) rotate(13deg)' },
+			},
+		},
+		animation: {
+			updown_left: 'updown_left 2s ease-in-out infinite',
+			updown_right: 'updown_right 2s ease-in-out infinite',
+		},
   	}
   },
   plugins: [
