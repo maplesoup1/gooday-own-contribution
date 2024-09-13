@@ -33,7 +33,7 @@ const hero = () => {
             <H1>Decreased cancellations.</H1>
           </div>
 
-          <div className="my-10 w-3/5">
+          <div className="my-10 w-full">
             Gooday is a fully integrated, centralised software and app that
             streamlines bookings between businesses and consumers. We automate
             the manual organisation process to increase bookings and decrease
@@ -49,12 +49,13 @@ const hero = () => {
         <div className="relative w-72 h-72">
           <div className="bg-blue-300 rounded-t-full w-full h-1/2 absolute top-0 overflow-visible"></div>
           <div className="bg-blue-300 rounded-b-full w-full h-1/2 absolute bottom-0 overflow-hidden"></div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            {character && (
+          {character && (
+            <motion.div
+              className="box"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              key={character}
+            >
               <Image
                 src={`/half/${character}_half.png`}
                 width={288}
@@ -62,8 +63,8 @@ const hero = () => {
                 alt={character}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
               />
-            )}
-          </motion.div>
+            </motion.div>
+          )}
         </div>
       </div>
 
