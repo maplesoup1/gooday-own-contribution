@@ -1,10 +1,21 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import H1 from "../h1";
 import H2 from "../h2";
 import { Button } from "../ui/button";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const hero = () => {
+  const [character, setCharacter] = useState<string>("Maria");
+
+  function toggleCharacter(newCharacter: string): void {
+    setCharacter((prevCharacter) =>
+      prevCharacter === newCharacter ? "" : newCharacter
+    );
+  }
+
   return (
     <div className="w-screen h-screen flex">
       {/* left div */}
@@ -35,12 +46,33 @@ const hero = () => {
       </div>
       {/* right div */}
       <div className="flex flex-col justify-center items-center basis-2/3 ">
-        <div className="bg-blue-300 rounded-full w-72 h-72"></div>
+        <div className="relative w-72 h-72">
+          <div className="bg-blue-300 rounded-t-full w-full h-1/2 absolute top-0 overflow-visible"></div>
+          <div className="bg-blue-300 rounded-b-full w-full h-1/2 absolute bottom-0 overflow-hidden"></div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            {character && (
+              <Image
+                src={`/half/${character}_half.png`}
+                width={288}
+                height={288}
+                alt={character}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              />
+            )}
+          </motion.div>
+        </div>
       </div>
 
       {/* square */}
       {/* character */}
-      <div className="bg-gradient-to-b from-emerald-200 to-emerald-600 absolute w-[100px] h-[100px] left-[649px] top-[84px] rounded-md  animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-emerald-200 to-emerald-600 absolute w-[100px] h-[100px] left-[649px] top-[84px] rounded-md  animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Frank")}
+      >
         <Image
           src="/half/Frank_half.png"
           width={93}
@@ -49,7 +81,10 @@ const hero = () => {
           className="relative bottom-[50px]"
         />
       </div>
-      <div className="bg-gradient-to-b from-green-200 to-green-600 absolute w-[100px] h-[100px] left-[1002px] top-[32px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-green-200 to-green-600 absolute w-[100px] h-[100px] left-[1002px] top-[32px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Olga")}
+      >
         <Image
           src="/half/Olga_half.png"
           width={80}
@@ -59,7 +94,10 @@ const hero = () => {
         />
       </div>
 
-      <div className="bg-gradient-to-b from-yellow-200 to-yellow-600 absolute w-[100px] h-[100px] left-[566px] top-[480px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-yellow-200 to-yellow-600 absolute w-[100px] h-[100px] left-[566px] top-[480px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Shutima")}
+      >
         <Image
           src="/half/Shutima_half.png"
           width={100}
@@ -69,7 +107,10 @@ const hero = () => {
         />
       </div>
 
-      <div className="bg-gradient-to-b from-red-200 to-red-600 absolute w-[100px] h-[100px] left-[1250px] top-[63px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-red-200 to-red-600 absolute w-[100px] h-[100px] left-[1250px] top-[63px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Charlotte")}
+      >
         <Image
           src="/half/Charlotte_half.png"
           width={90}
@@ -79,7 +120,10 @@ const hero = () => {
         />
       </div>
 
-      <div className="bg-gradient-to-b from-orange-200 to-orange-600 absolute w-[100px] h-[100px] left-[1300px] top-[290px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-orange-200 to-orange-600 absolute w-[100px] h-[100px] left-[1300px] top-[290px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Sinem")}
+      >
         <Image
           src="/half/Sinem_half.png"
           width={100}
@@ -89,7 +133,10 @@ const hero = () => {
         />
       </div>
 
-      <div className="bg-gradient-to-b from-purple-200 to-purple-600 absolute w-[100px] h-[100px] left-[1155px] top-[529px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-purple-200 to-purple-600 absolute w-[100px] h-[100px] left-[1155px] top-[529px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Raaj")}
+      >
         <Image
           src="/half/Raaj_half.png"
           width={100}
@@ -99,7 +146,10 @@ const hero = () => {
         />
       </div>
 
-      <div className="bg-gradient-to-b from-blue-200 to-blue-600 absolute w-[100px] h-[100px] left-[867px] top-[550px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center">
+      <div
+        className="bg-gradient-to-b from-blue-200 to-blue-600 absolute w-[100px] h-[100px] left-[867px] top-[550px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
+        onClick={() => toggleCharacter("Max")}
+      >
         <Image
           src="/half/Max_half.png"
           width={90}
