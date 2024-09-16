@@ -17,61 +17,90 @@ const hero = () => {
   }
 
   return (
-    <div className="w-screen h-screen flex">
-      {/* left div */}
-      <div className="h-auto basis-1/3 flex flex-col mt-10 ml-20">
-        <Image
-          src="/images/logo-text.png"
-          width={150}
-          height={150}
-          alt="logo"
-          className="my-14"
-        />
-        <div>
-          <div className="flex flex-col gap-6">
-            <H2>Increased Bookings.</H2>
-            <H1>Decreased cancellations.</H1>
-          </div>
+    <div className="w-screen h-screen flex overflow-hidden">
+      {/* background */}
+      {/* <div className="absolute top-5 w-[1000px] h-[600px] z-0 bg-blue-100 rounded-hero"></div> */}
+      <Image
+        src="/images/Ellipse 16.svg"
+        width={1000}
+        height={100}
+        alt="ellipse"
+        className="absolute -top-[60px] z-0 object-cover"
+      />
+      <Image
+        src="/images/background.svg"
+        width={1000}
+        height={1000}
+        alt="un"
+        className="absolute -top-[150px] left-[550px] z-10 object-cover"
+      />
 
-          <div className="my-10 w-full">
-            Gooday is a fully integrated, centralised software and app that
-            streamlines bookings between businesses and consumers. We automate
-            the manual organisation process to increase bookings and decrease
-            cancellations for all.
+      {/* left div */}
+      <div className="h-auto basis-1/3 flex flex-col mt-10 ml-24 z-10">
+        <div className="z-20">
+          <Image
+            src="/images/logo-text.png"
+            width={150}
+            height={150}
+            alt="logo"
+            className="my-14"
+          />
+          <div>
+            <div className="flex flex-col gap-6">
+              <H2>Increased Bookings.</H2>
+              <H1>Decreased cancellations.</H1>
+            </div>
+
+            <div className="my-10 w-full">
+              Gooday is a fully integrated, centralised software and app that
+              streamlines bookings between businesses and consumers. We automate
+              the manual organisation process to increase bookings and decrease
+              cancellations for all.
+            </div>
+            <Button className="bg-blue-300 text-white rounded-3xl w-44">
+              Get started
+            </Button>
           </div>
-          <Button className="bg-blue-300 text-white rounded-3xl w-44">
-            Get started
-          </Button>
         </div>
       </div>
       {/* right div */}
-      <div className="flex flex-col justify-center items-center basis-2/3 ">
-        <div className="relative w-72 h-72">
-          <div className="bg-blue-300 rounded-t-full w-full h-1/2 absolute top-0 overflow-visible"></div>
-          <div className="bg-blue-300 rounded-b-full w-full h-1/2 absolute bottom-0 overflow-hidden"></div>
+      <div className="flex flex-col justify-center items-center basis-2/3 z-40">
+        <div className="absolute w-[300px] h-[300px]">
+          <div className="bg-blue-300 rounded-full w-full h-full absolute top-0 animate-border_animation border-[10px] border-gray-200 border-opacity-50 overflow-hidden">
           {character && (
             <motion.div
               className="box"
-              initial={{ opacity: 0, scale: 0 }}
+              initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01],
+                scale: {
+                  type: "spring",
+                  damping: 5,
+                  stiffness: 100,
+                  restDelta: 0.001,
+                },
+              }}
               key={character}
             >
               <Image
-                src={`/half/${character}_half.png`}
-                width={288}
-                height={288}
+                src={`/full/${character}.png`}
+                width={150}
+                height={150}
                 alt={character}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                className="relative left-[85px] top-[30px]"
               />
             </motion.div>
           )}
+          </div>
         </div>
       </div>
 
       {/* square */}
       {/* character */}
       <div
-        className="bg-gradient-to-b from-emerald-200 to-emerald-600 absolute w-[100px] h-[100px] left-[649px] top-[84px] rounded-md  animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-emerald-200 to-emerald-600 absolute w-[100px] h-[100px] left-[649px] top-[84px] rounded-md  animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Frank")}
       >
         <Image
@@ -83,7 +112,7 @@ const hero = () => {
         />
       </div>
       <div
-        className="bg-gradient-to-b from-green-200 to-green-600 absolute w-[100px] h-[100px] left-[1002px] top-[32px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-green-200 to-green-600 absolute w-[100px] h-[100px] left-[1002px] top-[32px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Olga")}
       >
         <Image
@@ -96,7 +125,7 @@ const hero = () => {
       </div>
 
       <div
-        className="bg-gradient-to-b from-yellow-200 to-yellow-600 absolute w-[100px] h-[100px] left-[566px] top-[480px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-yellow-200 to-yellow-600 absolute w-[100px] h-[100px] left-[566px] top-[480px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Shutima")}
       >
         <Image
@@ -109,7 +138,7 @@ const hero = () => {
       </div>
 
       <div
-        className="bg-gradient-to-b from-red-200 to-red-600 absolute w-[100px] h-[100px] left-[1250px] top-[63px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-red-200 to-red-600 absolute w-[100px] h-[100px] left-[1250px] top-[63px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Charlotte")}
       >
         <Image
@@ -122,7 +151,7 @@ const hero = () => {
       </div>
 
       <div
-        className="bg-gradient-to-b from-orange-200 to-orange-600 absolute w-[100px] h-[100px] left-[1300px] top-[290px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-orange-200 to-orange-600 absolute w-[100px] h-[100px] left-[1300px] top-[290px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Sinem")}
       >
         <Image
@@ -135,7 +164,7 @@ const hero = () => {
       </div>
 
       <div
-        className="bg-gradient-to-b from-purple-200 to-purple-600 absolute w-[100px] h-[100px] left-[1155px] top-[529px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-purple-200 to-purple-600 absolute w-[100px] h-[100px] left-[1155px] top-[529px] rounded-md animate-updown_right hover:animate-none hover:scale-125 hover:rotate-[13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Raaj")}
       >
         <Image
@@ -148,7 +177,7 @@ const hero = () => {
       </div>
 
       <div
-        className="bg-gradient-to-b from-blue-200 to-blue-600 absolute w-[100px] h-[100px] left-[867px] top-[550px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
+        className="z-50 bg-gradient-to-b from-blue-200 to-blue-600 absolute w-[100px] h-[100px] left-[867px] top-[550px] rounded-md animate-updown_left hover:animate-none hover:scale-125 hover:rotate-[-13deg] cursor-pointer overflow-visible grid justify-center"
         onClick={() => toggleCharacter("Max")}
       >
         <Image
