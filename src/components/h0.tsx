@@ -8,7 +8,7 @@ type H0Props = {
 
 export default function H0({ children, className = "" }: H0Props) {
   return (
-    <div className={cn("text-[50px] font-bold font-poppins", className)}>
+    <div className={cn("text-[50px] leading-10 font-bold font-poppins", className)}>
       {children}
     </div>
   );

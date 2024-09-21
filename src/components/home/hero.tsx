@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import H1 from "../h1";
-import H2 from "../h2";
-import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Background from "./hero/Background";
+import Leftdiv from "./hero/Leftdiv";
+import Rightdiv from "./hero/Rightdiv";
 
 const hero = () => {
   const [character, setCharacter] = useState<string>("Maria");
@@ -17,56 +17,14 @@ const hero = () => {
   }
 
   return (
-    <div className="w-screen h-screen flex overflow-hidden">
-      {/* background */}
-      {/* <div className="absolute top-5 w-[1000px] h-[600px] z-0 bg-blue-100 rounded-hero"></div> */}
-      <Image
-        src="/images/Ellipse 16.svg"
-        width={1000}
-        height={100}
-        alt="ellipse"
-        className="absolute -top-[60px] z-0 object-cover"
-      />
-      <Image
-        src="/images/background.svg"
-        width={1000}
-        height={1000}
-        alt="un"
-        className="absolute -top-[150px] left-[550px] z-10 object-cover"
-      />
+    <div className="w-full h-screen flex overflow-hidden">
+      <Background />
+      <Leftdiv />
+      <Rightdiv />
 
-      {/* left div */}
-      <div className="h-auto basis-1/3 flex flex-col mt-10 ml-24 z-10">
-        <div className="z-20">
-          <Image
-            src="/images/logo-text.png"
-            width={150}
-            height={150}
-            alt="logo"
-            className="my-14"
-          />
-          <div>
-            <div className="flex flex-col gap-6">
-              <H2>Increased Bookings.</H2>
-              <H1>Decreased cancellations.</H1>
-            </div>
-
-            <div className="my-10 w-full">
-              Gooday is a fully integrated, centralised software and app that
-              streamlines bookings between businesses and consumers. We automate
-              the manual organisation process to increase bookings and decrease
-              cancellations for all.
-            </div>
-            <Button className="bg-blue-300 text-white rounded-3xl w-44">
-              Get started
-            </Button>
-          </div>
-        </div>
-      </div>
       {/* right div */}
       <div className="flex flex-col justify-center items-center basis-2/3 z-40">
-        <div className="absolute w-[300px] h-[300px]">
-          <div className="bg-blue-300 rounded-full w-full h-full absolute top-0 border-[10px] border-gray-200 border-opacity-50 overflow-hidden">
+        {/* <div className="bg-blue-300 rounded-full w-[300px] h-[300px] border-[5px] border-white border-opacity-50 overflow-hidden">
           {character && (
             <motion.div
               className="box"
@@ -93,8 +51,7 @@ const hero = () => {
               />
             </motion.div>
           )}
-          </div>
-        </div>
+        </div> */}
       </div>
 
       {/* square */}
