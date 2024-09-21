@@ -1,14 +1,15 @@
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
-interface CharacterAvatarProps {
-  character: string | null;
+interface CharacterDisplayProps {
+  character: string;
 }
 
-const CharacterAvatar: React.FC<CharacterAvatarProps> = ({ character }) => {
+const CharacterAvatar: React.FC<CharacterDisplayProps> = ({ character }) => {
   return (
-    <div className="bg-blue-300 rounded-full w-[300px] h-[300px] border-[5px] border-white border-opacity-50 overflow-hidden">
+    <div className="bg-blue-300 rounded-full w-[300px] h-[300px] absolute left-[630px] top-[180px] border-[10px] border-gray-200 border-opacity-50 overflow-hidden">
       {character && (
         <motion.div
           className="box"

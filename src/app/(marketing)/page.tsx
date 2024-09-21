@@ -11,7 +11,7 @@ import Hero from "@/components/home/hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col max-w-[1100px] m-auto">
+    <main className="flex flex-col max-w-[1150px] m-auto">
       {/* <Navigation_bar/>
       <Hero />
       <Feature />

@@ -7,7 +7,7 @@ type H1Props = {
 
 export default function H1({ children, className = "" }: H1Props) {
   return (
-    <div className={cn("text-[34px] font-bold font-poppins", className)}>
+    <div className={cn("text-[34px] leading-10 font-bold font-poppins", className)}>
       {children}
     </div>
   );

@@ -1,15 +1,23 @@
-"use client"
-import React from 'react'
-import CharacterAvatar from './CharacterAvatar'
-import { useState } from 'react'
+"use client";
+import React, { useState } from "react";
+import CharacterAvatar from "./CharacterAvatar";
+import CharacterGallery from "./CharacterGallery";
 
-const Rightdiv = () => {
-    const [character, setCharacter] = useState<string>("Maria");
-    return (
-        <div className='z-40'>
-            <CharacterAvatar character={character} />
-        </div>
-    )
-}
+const Rightdiv: React.FC = () => {
+  const [character, setCharacter] = useState<string>("Maria");
 
-export default Rightdiv
+  function toggleCharacter(newCharacter: string): void {
+    setCharacter((prevCharacter) =>
+      prevCharacter === newCharacter ? "" : newCharacter
+    );
+  }
+
+  return (
+    <div className="flex z-50">
+      <CharacterAvatar character={character} />
+      <CharacterGallery toggleCharacter={toggleCharacter} />
+    </div>
+  );
+};
+
+export default Rightdiv;
