@@ -21,7 +21,6 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-		hero: '100% 100% 60% 70%/50% 30% 20% 40%'
       },
       colors: {
         background: "hsl(var(--background))",
