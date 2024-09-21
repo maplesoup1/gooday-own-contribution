@@ -65,8 +65,7 @@ const hero = () => {
       </div>
       {/* right div */}
       <div className="flex flex-col justify-center items-center basis-2/3 z-40">
-        <div className="absolute w-[300px] h-[300px]">
-          <div className="bg-blue-300 rounded-full w-full h-full absolute top-0 border-[10px] border-gray-200 border-opacity-50 overflow-hidden">
+        <div className="bg-blue-300 rounded-full w-[300px] h-[300px] border-[10px] border-gray-200 border-opacity-50 overflow-hidden">
           {character && (
             <motion.div
               className="box"
@@ -93,7 +92,6 @@ const hero = () => {
               />
             </motion.div>
           )}
-          </div>
         </div>
       </div>
 
