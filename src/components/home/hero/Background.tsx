@@ -10,6 +10,7 @@ const Background = () => {
         height={1200}
         alt="background"
         className="scale-125"
+        data-testid = 'background-img'
       />
     </div>
   );

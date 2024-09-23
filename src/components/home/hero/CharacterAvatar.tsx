@@ -13,6 +13,7 @@ const CharacterAvatar: React.FC<CharacterDisplayProps> = ({ character }) => {
       {character && (
         <motion.div
           className="box"
+          data-testid="motion-div"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -33,6 +34,7 @@ const CharacterAvatar: React.FC<CharacterDisplayProps> = ({ character }) => {
             height={150}
             alt={character}
             className="relative left-[80px] top-[30px]"
+            data-testid = 'center-character'
           />
         </motion.div>
       )}
