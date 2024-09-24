@@ -8,6 +8,7 @@ import { MenuTap } from "@/components/menu-tap";
 import { RotateRect } from "@/components/rotate-rect";
 import Font_test from "@/components/home/font_test";
 import Hero from "@/components/home/hero";
+import Review from "@/components/review/page";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Chat_button /> */}
 
       <Hero/>
+      <Review/>
     </main>
   );
 }
