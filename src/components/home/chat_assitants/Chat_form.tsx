@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, FormEvent } from "react";
 
-const help_assistent = () => {
+const Help_assistent = () => {
   const [nameAttention, setNameAttention] = useState(false);
   const [emailAttention, setEmailAttention] = useState(false);
   const [isText, setIsText] = useState(false);
@@ -153,4 +153,4 @@ const help_assistent = () => {
   );
 };
 
-export default help_assistent;
+export default Help_assistent;
