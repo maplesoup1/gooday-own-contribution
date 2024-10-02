@@ -7,7 +7,7 @@ import Background from "./hero/Background";
 import Leftdiv from "./hero/Leftdiv";
 import Rightdiv from "./hero/Rightdiv";
 
-const hero = () => {
+const Hero = () => {
   const [character, setCharacter] = useState<string>("Maria");
 
   function toggleCharacter(newCharacter: string): void {
@@ -31,4 +31,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;
