@@ -55,7 +55,7 @@ const Help_assistent = () => {
       <div className="relative bg-yellow-300 mb-16">
         <h2 className="p-4 h-[88px] text-xl">Godday</h2>
         <div className="w-[330px] h-[82px] absolute rounded-lg shadow-lg mx-8 -mt-8 px-[12px] py-[15px] z-10 bg-yellow-200">
-          Hi! Let us know how we can help and we will respond shortly.
+          Hi! Let us know how we can help and we will respond shortly
         </div>
       </div>
 
